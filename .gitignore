@@ -3,4 +3,5 @@ node_modules
 dist
 dist-ssr
 *.local
-*/upload_temp/*
+**/upload_temp/*
+!**/upload_temp/.gitkeep
