@@ -2,7 +2,7 @@
 /*
  * @Descripttion: 
  * @Date: 2022-06-28 21:50:55
- * @LastEditTime: 2022-06-29 14:27:59
+ * @LastEditTime: 2022-07-06 16:34:45
  */
 import { UPLOAD_INFO, ALLOWED_TYPE, CHUNK_SIZE,API } from './config'
 
@@ -55,6 +55,7 @@ import { UPLOAD_INFO, ALLOWED_TYPE, CHUNK_SIZE,API } from './config'
                
                 try{
                    uploadedResult = await axios.post(API.UPLOAD_VIDEO,formData)
+                //    console.log(uploadedResult);
                 } catch(e){
                     oInfo.innerText = `${UPLOAD_INFO['UPLOAD_FAILED']}(${e.message})`
                     return

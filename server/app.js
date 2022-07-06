@@ -2,7 +2,7 @@
 /*
  * @Descripttion: 
  * @Date: 2022-06-28 21:55:20
- * @LastEditTime: 2022-06-29 14:27:21
+ * @LastEditTime: 2022-07-06 16:35:14
  */
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -26,6 +26,8 @@ const ALLOWED_TYPE = {
 app.all('*', (req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methodes', 'POST,GET')
+    // 设置要暴露的请求头
+    // res.header('Access-Control-Expose-Headers','Date,ETag,X-Powered-By,Keep-Alive')
     next()
 })
 
